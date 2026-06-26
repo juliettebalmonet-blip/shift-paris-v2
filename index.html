@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
   <header class="site-header">
@@ -42,20 +43,24 @@
 
     <div class="ticker-wrap" aria-label="Engagements qualité">
       <div class="ticker-track">
-        <span>Bien-être</span><span class="sep">✦</span>
-        <span>100% testé</span><span class="sep">✦</span>
-        <span>CBD premium</span><span class="sep">✦</span>
-        <span>Qualité analytique</span><span class="sep">✦</span>
-        <span>Conseils en magasin</span><span class="sep">✦</span>
-        <span>Livraison rapide</span><span class="sep">✦</span>
-        <span>THC &lt; 0,3%</span><span class="sep">✦</span>
-        <span>Bien-être</span><span class="sep">✦</span>
-        <span>100% testé</span><span class="sep">✦</span>
-        <span>CBD premium</span><span class="sep">✦</span>
-        <span>Qualité analytique</span><span class="sep">✦</span>
-        <span>Conseils en magasin</span><span class="sep">✦</span>
-        <span>Livraison rapide</span><span class="sep">✦</span>
-        <span>THC &lt; 0,3%</span><span class="sep">✦</span>
+        <div class="ticker-set">
+          <span>Bien-être</span><span class="sep">✦</span>
+          <span>100% testé</span><span class="sep">✦</span>
+          <span>CBD premium</span><span class="sep">✦</span>
+          <span>Qualité analytique</span><span class="sep">✦</span>
+          <span>Conseils en magasin</span><span class="sep">✦</span>
+          <span>Livraison rapide</span><span class="sep">✦</span>
+          <span>THC &lt; 0,3%</span><span class="sep">✦</span>
+        </div>
+        <div class="ticker-set" aria-hidden="true">
+          <span>Bien-être</span><span class="sep">✦</span>
+          <span>100% testé</span><span class="sep">✦</span>
+          <span>CBD premium</span><span class="sep">✦</span>
+          <span>Qualité analytique</span><span class="sep">✦</span>
+          <span>Conseils en magasin</span><span class="sep">✦</span>
+          <span>Livraison rapide</span><span class="sep">✦</span>
+          <span>THC &lt; 0,3%</span><span class="sep">✦</span>
+        </div>
       </div>
     </div>
 
@@ -122,31 +127,169 @@
       </div>
     </section>
 
-    <section class="section shops" id="boutiques">
-      <div class="section-heading">
-        <p class="eyebrow">Paris</p>
-        <h2>Deux boutiques, un même standard.</h2>
+    <section class="section v2-reviews" id="avis">
+      <div class="rev-inner">
+        <div class="section-heading" style="text-align:center">
+          <p class="eyebrow">Ce qu'ils disent</p>
+          <h2>Avis clients</h2>
+        </div>
+        <div class="rev-badge">
+          <span class="rev-score">4.9</span>
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-meta">
+            <div class="rev-meta-big">Excellent</div>
+            <div class="rev-meta-sm">+340 avis Google vérifiés</div>
+          </div>
+        </div>
+        <div class="rev-grid">
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« Une boutique hors du commun. Le conseil est personnalisé, les produits sont d'une qualité irréprochable. J'ai trouvé exactement ce qu'il me fallait pour dormir. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">SA</div>
+              <div><div class="rev-name">Sophie A.</div><div class="rev-loc">Paris 11e · il y a 3 jours</div></div>
+            </div>
+          </article>
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« L'ambiance de la boutique est unique à Paris, vraiment premium. L'équipe connaît parfaitement ses produits. La Diesel Kush est absolument exceptionnelle. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">TM</div>
+              <div><div class="rev-name">Thomas M.</div><div class="rev-loc">Paris 18e · il y a 1 semaine</div></div>
+            </div>
+          </article>
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« Je cherchais une alternative naturelle au stress. L'huile CBD 10ml a changé mon quotidien. Livraison rapide et produit conforme à la description. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">CL</div>
+              <div><div class="rev-name">Clara L.</div><div class="rev-loc">Oberkampf · il y a 2 semaines</div></div>
+            </div>
+          </article>
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« Enfin un endroit qui traite le CBD avec sérieux et élégance. Pas de bullshit, que du qualitatif. Les gummies Boomz sont mes préférés du marché. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">JR</div>
+              <div><div class="rev-name">Julien R.</div><div class="rev-loc">Simart · il y a 3 semaines</div></div>
+            </div>
+          </article>
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« Service client irréprochable. On m'a pris le temps d'expliquer chaque produit, les dosages, les effets. Rare dans ce secteur. Je recommande à 100%. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">MV</div>
+              <div><div class="rev-name">Marie V.</div><div class="rev-loc">Paris · il y a 1 mois</div></div>
+            </div>
+          </article>
+          <article class="rev-card">
+            <div class="rev-stars-sm">★★★★★</div>
+            <p class="rev-text">« La Piatella est un produit qu'on ne trouve pas ailleurs à Paris. La boutique sent bon, l'équipe est accueillante. Je reviens systématiquement ici. »</p>
+            <div class="rev-author">
+              <div class="rev-avatar">AB</div>
+              <div><div class="rev-name">Antoine B.</div><div class="rev-loc">Paris · il y a 1 mois</div></div>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="shop-grid">
-        <article class="shop-card">
-          <p class="shop-area">Paris 11e</p>
-          <h3>Oberkampf</h3>
-          <p>67 rue du Faubourg du Temple<br>75010 Paris</p>
-          <p class="shop-hours">Lun–Sam : 11h–21h · Dim : 13h–20h</p>
-        </article>
-        <article class="shop-card">
-          <p class="shop-area">Paris 18e</p>
-          <h3>Simart</h3>
-          <p>Rue Simart<br>75018 Paris</p>
-          <p class="shop-hours">Lun–Sam : 11h–21h · Dim : 13h–20h</p>
-        </article>
+    </section>
+
+    <section class="section v2-boutiques" id="boutiques">
+      <div class="bout-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Nos adresses</p>
+          <h2>Deux boutiques,<br>un seul standard.</h2>
+        </div>
+        <div class="bout-grid">
+          <article class="bout-card">
+            <p class="bout-arr">Paris 11e</p>
+            <h3 class="bout-name">Oberkampf</h3>
+            <p class="bout-addr">67 rue du Faubourg du Temple<br>75010 Paris</p>
+            <p class="bout-h">Lun–Sam : 11h–21h · Dim : 13h–20h</p>
+            <a href="https://maps.google.com/?q=67+rue+du+Faubourg+du+Temple+Paris" target="_blank" class="bout-link">Itinéraire →</a>
+          </article>
+          <article class="bout-card">
+            <p class="bout-arr">Paris 18e</p>
+            <h3 class="bout-name">Simart</h3>
+            <p class="bout-addr">Rue Simart<br>75018 Paris</p>
+            <p class="bout-h">Lun–Sam : 11h–21h · Dim : 13h–20h</p>
+            <a href="https://maps.google.com/?q=Rue+Simart+75018+Paris" target="_blank" class="bout-link">Itinéraire →</a>
+          </article>
+        </div>
+        <div class="map-wrap">
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-nl">
+      <div class="v2-nl-inner">
+        <p class="eyebrow">Restez informé</p>
+        <h2>Nouveautés &amp; offres exclusives</h2>
+        <p>En avant-première pour la communauté SHIFT.</p>
+        <form class="nl-form" onsubmit="return false">
+          <input type="email" placeholder="votre@email.com">
+          <button type="submit">S'inscrire</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <img src="assets/logo-shift.png" alt="SHIFT">
-    <p>SHIFT réinvente l'expérience CBD en France. Deux boutiques parisiennes, une gamme premium, un accompagnement sur-mesure.</p>
+  <footer class="v2-footer" id="contact">
+    <div class="v2-footer-inner">
+      <div class="v2-footer-brand">
+        <img src="assets/logo-shift.png" alt="SHIFT Paris">
+        <p>SHIFT réinvente l'expérience CBD en France. Deux boutiques parisiennes, une gamme premium, un accompagnement sur-mesure.</p>
+      </div>
+      <div class="v2-fcol">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="#produits">Fleurs CBD</a></li>
+          <li><a href="#produits">Huiles</a></li>
+          <li><a href="#produits">Gummies</a></li>
+          <li><a href="#produits">Extractions</a></li>
+          <li><a href="#produits">Accessoires</a></li>
+        </ul>
+      </div>
+      <div class="v2-fcol">
+        <h4>Boutiques</h4>
+        <ul>
+          <li><a href="#boutiques">Oberkampf</a></li>
+          <li><a href="#boutiques">Simart (18e)</a></li>
+          <li><a href="https://socbd.fr">En ligne</a></li>
+          <li><a href="https://socbd.fr">Click &amp; Collect</a></li>
+        </ul>
+      </div>
+      <div class="v2-fcol">
+        <h4>Infos</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">CBD en France</a></li>
+          <li><a href="https://socbd.fr">socbd.fr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="v2-footer-bot">
+      <span>© 2026 SHIFT Paris — SO CBD. Tous droits réservés.</span>
+      <span>Produits légaux · THC &lt; 0,3% · Réservé aux majeurs</span>
+    </div>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map', {zoomControl: false, scrollWheelZoom: false});
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {attribution: '© CARTO', maxZoom: 19}).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {attribution: '', maxZoom: 19}).addTo(map);
+    var ico = L.divIcon({html: '<div style="width:14px;height:14px;background:#ff5a00;border-radius:50%;border:2px solid #fffaf5;box-shadow:0 0 10px rgba(255,90,0,.6)"></div>', iconSize: [14,14], iconAnchor: [7,7], className: ''});
+    var p1 = L.marker([48.8643, 2.3665], {icon: ico}).addTo(map);
+    var p2 = L.marker([48.8924, 2.3489], {icon: ico}).addTo(map);
+    p1.bindPopup('<b style="color:#ff5a00">SHIFT · Oberkampf</b><br><span style="font-size:11px;color:#5f4d43">75010 Paris</span>');
+    p2.bindPopup('<b style="color:#ff5a00">SHIFT · Simart</b><br><span style="font-size:11px;color:#5f4d43">75018 Paris</span>');
+    map.setView([48.8784, 2.3577], 13);
+    var st = document.createElement('style');
+    st.textContent = '.leaflet-popup-content-wrapper{background:#f7f2eb;border:1px solid rgba(255,90,0,.2);border-radius:0;color:#2d2525;font-family:"Inter",sans-serif;font-size:12px;box-shadow:0 6px 24px rgba(255,90,0,.1)}.leaflet-popup-tip{background:#f7f2eb}';
+    document.head.appendChild(st);
+  </script>
 </body>
 </html>
