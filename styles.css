@@ -1099,12 +1099,13 @@ a {
 }
 
 .v2-nl h2 {
-  font-family: var(--display);
-  font-weight: 200;
-  font-size: clamp(2rem, 3.8vw, 4rem);
+  font-family: "dazzle-unicase", var(--display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  text-transform: uppercase;
   color: var(--white);
   margin: 0 0 14px;
-  line-height: 1.1;
+  line-height: 1.12;
 }
 
 .v2-nl p {
