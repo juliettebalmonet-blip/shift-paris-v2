@@ -316,9 +316,9 @@ a {
 
 .boutique-story {
   display: grid;
-  grid-template-columns: .88fr 1.12fr;
+  grid-template-columns: .52fr 1.48fr;
   gap: clamp(38px, 7vw, 110px);
-  align-items: start;
+  align-items: center;
 }
 
 .section h2 {
@@ -502,12 +502,12 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  align-items: start;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   background: rgba(255, 250, 245, .72);
   border: 1px solid rgba(255, 255, 255, .62);
   box-shadow: 0 14px 44px rgba(45, 37, 37, .06);
@@ -576,11 +576,12 @@ a {
 
 .product-card h3 {
   margin: 0 0 8px;
-  font-family: 'Space Grotesk', var(--display), sans-serif;
-  font-size: 1.35rem;
+  font-family: 'Josefin Sans', var(--display), sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: -.01em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   color: var(--brown);
 }
 
@@ -610,16 +611,15 @@ a {
 .story-visual {
   position: relative;
   overflow: hidden;
-  background: rgba(255, 250, 245, .34);
-  border: 1px solid rgba(45, 37, 37, .1);
-  box-shadow: 0 22px 60px rgba(45, 37, 37, .18);
-  max-height: 340px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .story-visual img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   mix-blend-mode: multiply;
 }
 
