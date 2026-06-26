@@ -354,7 +354,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: multiply;
 }
 
 .intro-img-front {
@@ -372,7 +371,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: multiply;
 }
 
 .intro-text {
@@ -578,9 +576,9 @@ a {
 
 .product-card h3 {
   margin: 0 0 8px;
-  font-family: 'Syne', var(--display), sans-serif;
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-family: 'Space Grotesk', var(--display), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
   font-style: normal;
   letter-spacing: -.01em;
   color: var(--brown);
@@ -615,11 +613,12 @@ a {
   background: rgba(255, 250, 245, .34);
   border: 1px solid rgba(45, 37, 37, .1);
   box-shadow: 0 22px 60px rgba(45, 37, 37, .18);
+  max-height: 340px;
 }
 
 .story-visual img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
   mix-blend-mode: multiply;
 }
@@ -821,7 +820,7 @@ a {
 
 /* ===== REVIEWS ===== */
 .v2-reviews {
-  background: linear-gradient(180deg, rgba(255, 250, 245, .5), rgba(231, 223, 240, .5));
+  background: var(--paper);
 }
 
 .rev-inner {
@@ -959,7 +958,7 @@ a {
 
 /* ===== BOUTIQUES + MAP ===== */
 .v2-boutiques {
-  background: linear-gradient(180deg, rgba(231, 223, 240, .5), rgba(255, 250, 245, .5));
+  background: var(--lilac-soft);
 }
 
 .bout-inner {
