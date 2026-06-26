@@ -212,10 +212,10 @@ a {
 .hero h1,
 .section h2 {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 200;
-  line-height: 1;
-  letter-spacing: 0;
+  font-family: "dazzle-unicase", var(--display);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: .02em;
 }
 
 .hero h1 {
