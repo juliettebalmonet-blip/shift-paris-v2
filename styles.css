@@ -160,7 +160,7 @@ a {
   position: relative;
   width: min(1080px, 100%);
   height: clamp(172px, 23vw, 272px);
-  margin: 0 0 34px;
+  margin: 0 0 88px;
   overflow: hidden;
 }
 
@@ -217,6 +217,11 @@ a {
   line-height: 1.12;
   letter-spacing: .02em;
   text-transform: uppercase;
+}
+
+.hero h1 strong,
+.section h2 strong {
+  font-weight: 700;
 }
 
 .hero h1 {
@@ -589,12 +594,12 @@ a {
 
 .product-card h3 {
   margin: 0 0 8px;
-  font-family: 'Josefin Sans', var(--display), sans-serif;
+  font-family: "dazzle-unicase", var(--display);
   font-size: 1.1rem;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-transform: lowercase;
   color: var(--title);
 }
 
