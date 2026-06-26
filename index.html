@@ -35,7 +35,7 @@
           <img class="logo-part logo-part-left" src="assets/logo-part-left.png" alt="">
           <img class="logo-part logo-part-right" src="assets/logo-part-right.png" alt="">
         </div>
-        <h1>Du <strong>CBD</strong> choisi pour ce qu’il contient,<br><span class="hero-accent">pas pour ce qu’il promet.</span></h1>
+        <h1>Du CBD choisi pour ce qu’il contient,<br><span class="hero-accent">pas pour ce qu’il promet.</span></h1>
         <div class="hero-actions">
           <a class="button button-primary" href="#produits">Découvrir la gamme</a>
           <a class="button button-secondary" href="#boutiques">Trouver une boutique</a>
@@ -69,11 +69,11 @@
     <section class="section intro" id="univers">
       <div class="intro-inner">
         <div class="intro-visual">
-          <img src="assets/intro-group.png" alt="La gamme SHIFT Paris">
+          <img src="assets/intro-group.gif" alt="La gamme SHIFT Paris">
         </div>
         <div class="intro-text">
           <p class="eyebrow">Notre histoire</p>
-          <h2>Un nouveau regard<br>sur le <strong>CBD</strong>.</h2>
+          <h2>Un nouveau regard<br>sur le CBD.</h2>
           <div class="intro-copy">
             <p>SHIFT est né d'une conviction : le CBD mérite un écrin à la hauteur de ses bienfaits. Loin des codes traditionnels, nous avons conçu une expérience retail premium où chaque produit est sélectionné avec rigueur.</p>
             <p>De la fleur aux huiles, en passant par les gummies — chaque référence est testée, traçable, et pensée pour une clientèle exigeante.</p>
@@ -350,12 +350,27 @@
     document.head.appendChild(st);
 
     document.querySelector('.brand-mark').addEventListener('click', function() {
-      var parts = document.querySelectorAll('.logo-assembly .logo-part');
-      parts.forEach(function(part) {
-        part.style.animation = 'none';
-        void part.offsetWidth;
-        part.style.animation = '';
-      });
+      function replayLogo() {
+        var parts = document.querySelectorAll('.logo-assembly .logo-part');
+        parts.forEach(function(part) {
+          part.style.animation = 'none';
+          void part.offsetWidth;
+          part.style.animation = '';
+        });
+      }
+      if (window.scrollY === 0) {
+        replayLogo();
+        return;
+      }
+      var scrollEndTimer;
+      function onScroll() {
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = setTimeout(function() {
+          window.removeEventListener('scroll', onScroll);
+          replayLogo();
+        }, 120);
+      }
+      window.addEventListener('scroll', onScroll);
     });
   </script>
 </body>
