@@ -168,8 +168,8 @@ a {
 
 .logo-assembly {
   position: relative;
-  width: min(760px, 100%);
-  height: clamp(112px, 15.8vw, 184px);
+  width: min(880px, 100%);
+  height: clamp(132px, 18.5vw, 216px);
   margin: 0 0 34px;
   overflow: hidden;
 }
@@ -230,7 +230,7 @@ a {
 
 .hero h1 {
   max-width: 920px;
-  font-size: clamp(3.4rem, 6.2vw, 6.75rem);
+  font-size: clamp(2rem, 3.2vw, 3.6rem);
   color: var(--brown);
   text-shadow: none;
 }
@@ -303,7 +303,7 @@ a {
 
 .section h2 {
   max-width: 850px;
-  font-size: clamp(3.1rem, 7vw, 7rem);
+  font-size: clamp(2rem, 3.8vw, 4rem);
 }
 
 .intro-copy,
@@ -516,7 +516,7 @@ a {
   }
 
   .logo-assembly {
-    width: min(640px, 88vw);
+    width: min(720px, 92vw);
   }
 
   .intro,
@@ -562,7 +562,7 @@ a {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 1.9rem;
   }
 
   .hero-actions {
@@ -588,7 +588,7 @@ a {
   }
 
   .section h2 {
-    font-size: 3.35rem;
+    font-size: 2rem;
   }
 
   .product-grid,
