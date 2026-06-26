@@ -117,7 +117,7 @@ a {
   position: relative;
   min-height: calc(100vh - 76px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background: linear-gradient(135deg, #cfc5de 0%, #e4daf0 45%, #ede5f5 100%);
@@ -141,7 +141,7 @@ a {
   width: min(1120px, 100%);
   max-width: none;
   margin: 0 auto;
-  padding: clamp(36px, 5vw, 64px) clamp(22px, 6vw, 76px) clamp(48px, 7vw, 88px);
+  padding: clamp(28px, 3.5vw, 44px) clamp(22px, 6vw, 76px) clamp(48px, 7vw, 88px);
   align-items: center;
   text-align: center;
 }
@@ -224,6 +224,10 @@ a {
   text-shadow: none;
 }
 
+.hero-accent {
+  color: var(--orange);
+}
+
 .hero-text {
   max-width: 660px;
   margin: 28px 0 0;
@@ -236,7 +240,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 34px;
+  margin-top: 56px;
 }
 
 .hero-actions .button {
@@ -316,10 +320,10 @@ a {
 
 .boutique-story-inner {
   display: grid;
-  grid-template-columns: .52fr 1.48fr;
-  gap: clamp(38px, 7vw, 110px);
+  grid-template-columns: .72fr 1.28fr;
+  gap: clamp(38px, 6vw, 88px);
   align-items: center;
-  max-width: 960px;
+  max-width: 1060px;
   margin: 0 auto;
   width: 100%;
 }
