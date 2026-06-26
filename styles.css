@@ -216,7 +216,6 @@ a {
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: .02em;
-  text-transform: uppercase;
 }
 
 .hero h1 strong,
@@ -336,7 +335,7 @@ a {
 }
 
 .intro .eyebrow {
-  color: var(--orange);
+  color: var(--orange-deep);
 }
 
 .intro .intro-copy p {
@@ -1107,7 +1106,6 @@ a {
   font-family: "neue-kabel", var(--display);
   font-weight: 400;
   font-size: clamp(1.2rem, 2vw, 2.2rem);
-  text-transform: uppercase;
   color: var(--white);
   margin: 0 0 14px;
   line-height: 1.12;

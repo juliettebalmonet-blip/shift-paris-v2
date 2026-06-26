@@ -348,6 +348,15 @@
     var st = document.createElement('style');
     st.textContent = '.leaflet-popup-content-wrapper{background:#f7f2eb;border:1px solid rgba(255,90,0,.2);border-radius:0;color:#2d2525;font-family:"Inter",sans-serif;font-size:12px;box-shadow:0 6px 24px rgba(255,90,0,.1)}.leaflet-popup-tip{background:#f7f2eb}';
     document.head.appendChild(st);
+
+    document.querySelector('.brand-mark').addEventListener('click', function() {
+      var parts = document.querySelectorAll('.logo-assembly .logo-part');
+      parts.forEach(function(part) {
+        part.style.animation = 'none';
+        void part.offsetWidth;
+        part.style.animation = '';
+      });
+    });
   </script>
 </body>
 </html>
