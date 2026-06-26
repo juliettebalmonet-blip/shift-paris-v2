@@ -7,7 +7,7 @@
   <meta name="description" content="SHIFT Paris, concept store CBD premium, lumineux et contemporain. Sélection produits, conseil en boutique et future expérience e-commerce.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
@@ -20,6 +20,7 @@
       <a href="#univers">Univers</a>
       <a href="#produits">Produits</a>
       <a href="#boutiques">Boutiques</a>
+      <a href="#avis">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="header-cta" href="#produits">Préparer ma visite</a>
@@ -65,15 +66,44 @@
     </div>
 
     <section class="section intro" id="univers">
-      <div>
+      <div class="intro-visual">
+        <div class="intro-img-back">
+          <img src="assets/diesel_kush.png" alt="Fleur CBD Diesel Kush">
+        </div>
+        <div class="intro-img-front">
+          <img src="assets/piatella.png" alt="Extraction Piatella">
+        </div>
+      </div>
+      <div class="intro-text">
         <p class="eyebrow">Notre histoire</p>
         <h2>Un nouveau regard sur le CBD.</h2>
-      </div>
-      <div class="intro-copy">
-        <p>SHIFT est né d'une conviction : le CBD mérite un écrin à la hauteur de ses bienfaits. Loin des codes traditionnels, nous avons conçu une expérience retail premium où chaque produit est sélectionné avec rigueur.</p>
-        <p>De la fleur aux huiles, en passant par les gummies — chaque référence est testée, traçable, et pensée pour une clientèle exigeante.</p>
+        <div class="intro-copy">
+          <p>SHIFT est né d'une conviction : le CBD mérite un écrin à la hauteur de ses bienfaits. Loin des codes traditionnels, nous avons conçu une expérience retail premium où chaque produit est sélectionné avec rigueur.</p>
+          <p>De la fleur aux huiles, en passant par les gummies — chaque référence est testée, traçable, et pensée pour une clientèle exigeante.</p>
+        </div>
       </div>
     </section>
+
+    <div class="v2-stats">
+      <div class="v2-stats-inner">
+        <div class="v2-stat">
+          <div class="v2-stat-num">2</div>
+          <div class="v2-stat-lab">Boutiques à Paris</div>
+        </div>
+        <div class="v2-stat">
+          <div class="v2-stat-num">4.9</div>
+          <div class="v2-stat-lab">Note moyenne</div>
+        </div>
+        <div class="v2-stat">
+          <div class="v2-stat-num">+200</div>
+          <div class="v2-stat-lab">Références CBD</div>
+        </div>
+        <div class="v2-stat">
+          <div class="v2-stat-num">100%</div>
+          <div class="v2-stat-lab">Analysées en labo</div>
+        </div>
+      </div>
+    </div>
 
     <section class="section products" id="produits">
       <div class="section-heading">
@@ -82,35 +112,63 @@
       </div>
       <div class="product-grid">
         <article class="product-card">
-          <img src="assets/diesel_kush.png" alt="Fleur CBD Diesel Kush">
-          <div>
+          <div class="product-img-wrap">
+            <img src="assets/diesel_kush.png" alt="Fleur CBD Diesel Kush">
+            <span class="product-badge">En stock</span>
+          </div>
+          <div class="product-info">
             <p class="product-type">Fleur CBD</p>
             <h3>Diesel Kush</h3>
-            <p>Arômes intenses de diesel et d'agrumes. Taux CBD élevé, effet apaisant prononcé.</p>
+            <p class="product-desc">Arômes intenses de diesel et d'agrumes. Taux CBD élevé, effet apaisant prononcé.</p>
+            <div class="product-footer">
+              <span class="product-price">9,50 €</span>
+              <a href="#" class="product-cta">Ajouter au panier</a>
+            </div>
           </div>
         </article>
         <article class="product-card">
-          <img src="assets/premium_cbd_oil.png" alt="Huile CBD premium">
-          <div>
+          <div class="product-img-wrap">
+            <img src="assets/premium_cbd_oil.png" alt="Huile CBD premium">
+            <span class="product-badge">En stock</span>
+          </div>
+          <div class="product-info">
             <p class="product-type">Huile CBD</p>
             <h3>Premium CBD Oil</h3>
-            <p>10ml full-spectrum, dosée avec précision. Absorption optimale, goût naturel.</p>
+            <p class="product-desc">10ml full-spectrum, dosée avec précision. Absorption optimale, goût naturel.</p>
+            <div class="product-footer">
+              <span class="product-price">39,90 €</span>
+              <a href="#" class="product-cta">Ajouter au panier</a>
+            </div>
           </div>
         </article>
         <article class="product-card">
-          <img src="assets/piatella.png" alt="Extraction CBD Piatella">
-          <div>
+          <div class="product-img-wrap">
+            <img src="assets/piatella.png" alt="Extraction CBD Piatella">
+            <span class="product-badge">En stock</span>
+          </div>
+          <div class="product-info">
             <p class="product-type">Extraction CBD</p>
             <h3>Piatella</h3>
-            <p>Extraction artisanale à la texture unique. Le savoir-faire CBD en format concentré.</p>
+            <p class="product-desc">Extraction artisanale à la texture unique. Le savoir-faire CBD en format concentré.</p>
+            <div class="product-footer">
+              <span class="product-price">24,90 €</span>
+              <a href="#" class="product-cta">Ajouter au panier</a>
+            </div>
           </div>
         </article>
         <article class="product-card">
-          <img src="assets/boomz_myrtille.png" alt="Gummies Boomz myrtille">
-          <div>
+          <div class="product-img-wrap">
+            <img src="assets/boomz_myrtille.png" alt="Gummies Boomz myrtille">
+            <span class="product-badge">En stock</span>
+          </div>
+          <div class="product-info">
             <p class="product-type">Gummies Delta-9</p>
             <h3>Boomz Myrtille</h3>
-            <p>30mg de Delta-9 par dose, saveur myrtille. Expérience contrôlée et précise.</p>
+            <p class="product-desc">30mg de Delta-9 par dose, saveur myrtille. Expérience contrôlée et précise.</p>
+            <div class="product-footer">
+              <span class="product-price">18,90 €</span>
+              <a href="#" class="product-cta">Ajouter au panier</a>
+            </div>
           </div>
         </article>
       </div>
