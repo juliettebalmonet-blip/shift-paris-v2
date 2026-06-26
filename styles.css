@@ -18,7 +18,7 @@
   --mist: #edf0ec;
   --line: rgba(45, 37, 37, .12);
   --shadow: 0 22px 60px rgba(66, 45, 31, .14);
-  --display: "Josefin Sans", "Manrope", Arial, sans-serif;
+  --display: "Manrope", "Inter", Arial, sans-serif;
 }
 
 * {
@@ -212,9 +212,9 @@ a {
 .section h2 {
   margin: 0;
   font-family: var(--display);
-  font-weight: 300;
-  line-height: 1.08;
-  letter-spacing: .04em;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .hero h1 {
@@ -309,20 +309,16 @@ a {
 
 .intro {
   display: grid;
-  grid-template-columns: .44fr 1fr;
-  gap: clamp(32px, 5vw, 72px);
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(38px, 7vw, 110px);
   align-items: center;
-  max-width: 1020px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .boutique-story {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: .52fr 1.48fr;
+  gap: clamp(38px, 7vw, 110px);
   align-items: center;
-  text-align: center;
-  gap: clamp(32px, 5vw, 56px);
 }
 
 .section h2 {
@@ -341,10 +337,7 @@ a {
 
 .intro-visual {
   position: relative;
-  height: 540px;
-  max-width: 340px;
-  width: 100%;
-  justify-self: end;
+  height: 480px;
 }
 
 .intro-img-back {
@@ -360,7 +353,7 @@ a {
 .intro-img-back img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .intro-img-front {
@@ -371,12 +364,13 @@ a {
   height: 62%;
   overflow: hidden;
   box-shadow: var(--shadow);
+  border: 4px solid var(--white);
 }
 
 .intro-img-front img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .intro-text {
@@ -620,8 +614,6 @@ a {
   background: transparent;
   border: none;
   box-shadow: none;
-  max-width: 260px;
-  width: 100%;
 }
 
 .story-visual img {
@@ -632,8 +624,7 @@ a {
 }
 
 .story-copy {
-  text-align: center;
-  max-width: 680px;
+  align-self: center;
 }
 
 .story-copy .eyebrow {
@@ -648,8 +639,6 @@ a {
 .story-copy p {
   max-width: 610px;
   color: var(--brown-soft);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .shops {
@@ -745,14 +734,13 @@ a {
     width: min(720px, 92vw);
   }
 
-  .intro {
+  .intro,
+  .boutique-story {
     grid-template-columns: 1fr;
   }
 
   .intro-visual {
     height: 360px;
-    max-width: 280px;
-    margin: 0 auto;
   }
 
   .product-grid {
@@ -861,7 +849,7 @@ a {
 .rev-score {
   font-family: var(--display);
   font-size: 3.2rem;
-  font-weight: 300;
+  font-weight: 200;
   color: var(--lilac-strong);
   line-height: 1;
 }
@@ -1100,7 +1088,7 @@ a {
 
 .v2-nl h2 {
   font-family: var(--display);
-  font-weight: 300;
+  font-weight: 200;
   font-size: clamp(2rem, 3.8vw, 4rem);
   color: var(--white);
   margin: 0 0 14px;
